@@ -1,8 +1,8 @@
 // Codes
 code {
   @include label-base();
-  @include label-variant($code-color, lighten($code-color, 42.5%));
-  font-size: 85%;
+  @include label-variant($code-color, $code-bg-color);
+  /*font-size: 85%;*/
 }
 
 .code {
@@ -13,7 +13,7 @@ code {
   &::before {
     color: $gray-color;
     content: attr(data-lang);
-    font-size: $font-size-sm;
+    font-size: $font-size;
     position: absolute;
     right: $layout-spacing;
     top: $unit-h;
